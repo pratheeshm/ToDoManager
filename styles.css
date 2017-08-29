@@ -37,7 +37,7 @@
 	margin-top: 50px;
 }
 .progress-body ,.todo-body, .review-body, .done-body{
-	min-height: 100px;
+height: 100%;
 }
 .col{
 	width: 100% !important;
