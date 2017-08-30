@@ -1,5 +1,5 @@
 .type-box{
-
+	
 	text-align: center;
 	height: 100px !important;
 	line-height: 100px;
@@ -7,6 +7,7 @@
 	font-family: 'Courgette', cursive ;
 
 }
+
 header{
 	width: 100%;
 	text-align: center;
@@ -15,6 +16,12 @@ header{
 	font-size: 60px;
 	font-family: 'Bungee Shade', cursive;
 
+}
+.card-content{
+	font-family: 'Bungee Shade', cursive;
+font-family: 'Chicle', cursive;
+font-family: 'Berkshire Swash', cursive;
+font-size: 20px !important;
 }
 .btn{
 	font-weight: bold;
@@ -73,6 +80,7 @@ header{
 	font-family: 'Courgette', cursive;
 	font-family: 'Bevan', cursive;
 }
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	color: #ffebee;
