@@ -52,12 +52,13 @@
 					<div class="card  lime accent-1" >
 						<div class="card-content black-text ">
 
-							<p><%- text %></p>
+							<p id="text"><%- text %></p>
 						</div>
 						<div class="card-action">
 							<a class="waves-effect waves-light btn" id="delete"><i  class="large material-icons">close</i></a>
 
-							
+							<a class="waves-effect waves-light btn" id="edit"><i  class="large material-icons">create</i></a>
+
 						</div>
 					</div>
 				</div>
@@ -110,10 +111,29 @@
 	    		       this.$el.bind("dragstart",this.dragstart_handler);
 	    		   },
 	    		   events:{
-	    		   	"click #delete" : "destroy"
+	    		   	"click #delete" : "destroy",
+	    		   	"click #edit"	:"edit",
+	    		   	"keypress #newText":"update"
 
 	    		   	
 
+	    		   },
+	    		   update:function(e){
+	    		   	if( e.which!=13 || ! $("#newText").val().trim() ){
+	    			return;
+	    			}		
+	    		var txt=this.$("#newText").val();
+	    				this.$("#text").html("");
+	    				this.$("#text").html(txt);
+	    				this.$("#edit").show();
+
+	    		   		// this.model.set("text",$("#newText").val());
+
+	    		   },
+	    		   edit:function(){
+	    		   	this.$("#edit").hide();
+	    		   		var txt=this.$("#text").html();
+		    		this.$("#text").html('<input type="text" value="' + txt +'" id="newText">');
 	    		   },
 	    		   dragstart_handler:function(ev){
 
